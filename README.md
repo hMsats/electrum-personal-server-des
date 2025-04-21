@@ -4,11 +4,11 @@ This fork adds support for descriptor wallets to the original Electrum Personal 
 
 It implements the [pull request](https://github.com/chris-belcher/electrum-personal-server/pull/271) proposed by user rage-proof.
 
-However, this pull request only works for xpubs (legacy-adresses starting with a 1 or 3) but not for zpubs (bc1...). 
+However, the pull request only works for xpubs (legacy-adresses starting with a 1 or 3) but not for zpubs (bc1...). 
 
 However, zpubs can be added as a lot of watchonly addresses.
 
-With the appropriate watchonly addresses, this version can be used with a Trezor hardware wallet connected to Electrum connected to EPS.
+With the appropriate watchonly addresses, this version can be used with a Trezor hardware wallet connected to Electrum connected to EPS connected to your full bitcoin node.
 
 THE REST OF THE TEXT IS FROM THE ORIGINAL CODE:
 
