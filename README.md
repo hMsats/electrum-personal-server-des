@@ -1,3 +1,17 @@
+# Electrum Personal Server for descriptor wallets
+
+This fork adds support for descriptor wallets.
+
+It implements the [pull request](https://github.com/chris-belcher/electrum-personal-server/pull/271) proposed by rage-proof.
+
+However, this pull request only works for xpubs (legacy-adresses starting with a 1 or 3) but not for zpubs (bc1...). 
+
+However, zpubs can be added as a lot of watchonly addresses.
+
+With the appropriate watchonly addresses, this version can be used with a Trezor hardware wallet connected to Electrum connected to EPS.
+
+THE REST OF THE TEXT IS FROM THE ORIGINAL CODE:
+
 # Electrum Personal Server
 
 Electrum Personal Server aims to make using Electrum bitcoin wallet more secure
