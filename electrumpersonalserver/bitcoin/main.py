@@ -317,6 +317,11 @@ def subtract_pubkeys(p1, p2):
             decode_pubkey(p1, f1), (k2[0], (P - k2[1]) % P)), f1)
 
 
+def subtract_privkeys(p1, p2):
+    f1, f2 = get_privkey_format(p1), get_privkey_format(p2)
+    k2 = decode_privkey(p2, f2)
+    return encode_privkey((decode_privkey(p1, f1) - k2) % N, f1)
+
 # Hashes
 
 
@@ -404,6 +409,7 @@ def b58check_to_bin_full(inp):
     data = b'\x00' * leadingzbytes + changebase(inp, 58, 256)
     assert bin_dbl_sha256(data[:-4])[:4] == data[-4:]
     return data[:-4]
+
 
 def get_version_byte(inp):
     leadingzbytes = len(re.match('^1*', inp).group(0))
