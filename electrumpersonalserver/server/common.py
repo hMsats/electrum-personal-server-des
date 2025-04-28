@@ -144,9 +144,18 @@ def run_electrum_server(rpc, txmonitor, config):
                         for ipnet in ip_whitelist]):
                     logger.debug(addr[0] + " not in whitelist, closing")
                     raise ConnectionRefusedError()
-                sock = ssl.wrap_socket(sock, server_side=True,
-                    certfile=certfile, keyfile=keyfile,
-                    ssl_version=ssl.PROTOCOL_SSLv23)
+
+                # Create a default SSL context
+                context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+                # Load server certificate and key
+                context.load_cert_chain(certfile=certfile, keyfile=keyfile)
+                # Wrap the socket using the context
+                sock = context.wrap_socket(sock, server_side=True)
+ 
+                #sock = ssl.wrap_socket(sock, server_side=True,
+                #    certfile=certfile, keyfile=keyfile,
+                #    ssl_version=ssl.PROTOCOL_SSLv23)
+
             except socket.timeout:
                 poll_interval_change = mempool_sync.poll_update(1)
                 if poll_interval_change == PollIntervalChange.FAST_POLLING:
