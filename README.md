@@ -9,6 +9,7 @@ However, the pull request only works for xpubs (legacy-adresses starting with a 
 However, zpubs can be added as a lot of watchonly addresses like this:
 
 [watch-only-addresses]
+
 addr = bc1q..12ab bc1q...34cd bc1q...56ef
 
 With the appropriate watchonly addresses, this version can be used with a Trezor hardware wallet connected to Electrum, connected to EPS, connected to your full Bitcoin node.
