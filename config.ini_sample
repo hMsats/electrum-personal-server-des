@@ -8,31 +8,14 @@
 [master-public-keys]
 # Add electrum wallet master public keys to this section
 # In electrum then go Wallet -> Information to get the mpk
-
-
-#any_name_works = xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF
+#any_name_works=zpub...
 
 # Multiple master public keys may be added by simply adding another line
-#my_second_wallet = xpubanotherkey
+#my_second_wallet = zpubanotherkey
 
 # Multisig wallets use format `required-signatures [list of master pub keys]`
 # this example is a 2-of-3 multisig wallet
 #multisig_wallet = 2 xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF
-
-[public-descriptors]
-
-# ADD ZPUB (bc1...) AS INDIVIDUAL WATCHONLY ADDRESSES!
-# SEE BELOW: [watch-only-addresses]
-
-# Add descriptor wallets to this section. pk(), pkh(), sh(), wpkh(), wsh(), tr()
-# Currently are only xpubs inside the descriptors allowed. This are used to create the derived addresses.
-# DONT CREATE YOUR OWN DESCRIPTOR, but instead use the one provided by the wallet itself.
-
-# descriptor_name = pkh(xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF)
-
-# taproot_wallet = tr(xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF)
-
-# multisig_wallet = wsh(sortedmulti(2,xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF,xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF,xpub661MyMwAqRbcFseXCwRdRVkhVuzEiskg4QUp5XpUdNf2uGXvQmnD4zcofZ1MN6Fo8PjqQ5cemJQ39f7RTwDVVputHMFjPUn8VRp2pJQMgEF))
 
 [bitcoin-rpc]
 host = 127.0.0.1
