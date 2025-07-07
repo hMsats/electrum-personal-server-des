@@ -1,6 +1,6 @@
 # Electrum Personal Server for descriptor wallets
 
-This fork adds support for descriptor wallets with zpubs to the original Electrum Personal Server (EPS).
+This fork adds support for descriptor wallets (with bcq1... addresses) to the original Electrum Personal Server (EPS).
 
 It implements the [pull request](https://github.com/chris-belcher/electrum-personal-server/pull/271) proposed by user rage-proof.
 
@@ -9,7 +9,7 @@ The original EPS would give the error:
 electrumpersonalserver.server.jsonrpc.JsonRpcError: {'code': -4, 'message': 'Only legacy wallets are supported by this command'}
 ```
 
-This version can be used with a Trezor hardware wallet (SegWit Betch32 addresses (bcq1...)) connected to Electrum, connected to EPS, connected to your full Bitcoin node with a descriptor wallet.
+This version can be used with a Trezor hardware wallet connected to Electrum, connected to EPS, connected to your full Bitcoin node with a descriptor wallet (all with zpubs or bcq1... addresses).
 
 THE REST OF THE TEXT IS FROM THE ORIGINAL CODE:
 
