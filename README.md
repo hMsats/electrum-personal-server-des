@@ -6,7 +6,7 @@ It implements the [pull request](https://github.com/chris-belcher/electrum-perso
 
 However, the pull request only works for xpubs (legacy-adresses starting with a 1 or 3) but not for zpubs (bc1...). 
 
-However, zpubs can be added as a lot of watchonly addresses like this:
+However, zpubs can be added as a lot of watchonly addresses in the config.ini file like this:
 
 ```
 [watch-only-addresses]
