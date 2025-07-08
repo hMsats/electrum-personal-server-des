@@ -1,6 +1,6 @@
 # Electrum Personal Server for descriptor wallets
 
-This fork adds support for descriptor wallets (with bcq1... addresses) to the original Electrum Personal Server (EPS).
+This fork adds support for descriptor wallets to the original Electrum Personal Server (EPS).
 
 It implements the [pull request](https://github.com/chris-belcher/electrum-personal-server/pull/271) proposed by user rage-proof.
 
