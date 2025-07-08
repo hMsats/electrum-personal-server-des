@@ -11,7 +11,7 @@ electrumpersonalserver.server.jsonrpc.JsonRpcError: {'code': -4, 'message': 'Onl
 
 This version can be used with a Trezor hardware wallet connected to Electrum, connected to EPS connected to your full Bitcoin node with a descriptor wallet. 
 
-Note that if the Trezor, Electrum and EPS use zpubs (BIP84 bc1... addresses), the descriptor wallet needs xpubs. Therefore the zpub in Electrum (Wallet -> Information) needs to be converted to a xpub using "xpub-converter" (which also gives the "fingerprint") and read into the full node wallet like this: 
+Note that if the Trezor, Electrum and EPS use zpubs (BIP84 bc1... addresses), the descriptor wallet needs xpubs. Therefore the zpub in Electrum (Wallet -> Information) needs to be converted to a xpub using "xpub-converter" (which also gives the "fingerprint") and read into the full node descriptor wallet like this: 
 
 ```
 bitcoin-cli importdescriptors '[{
