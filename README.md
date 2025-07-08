@@ -9,7 +9,27 @@ The original EPS would give the error:
 electrumpersonalserver.server.jsonrpc.JsonRpcError: {'code': -4, 'message': 'Only legacy wallets are supported by this command'}
 ```
 
-This version can be used with a Trezor hardware wallet connected to Electrum, connected to EPS, connected to your full Bitcoin node with a descriptor wallet (all with zpubs or bcq1... addresses).
+This version can be used with a Trezor hardware wallet connected to Electrum, connected to EPS connected to your full Bitcoin node with a descriptor wallet. 
+
+Note that if the Trezor, Electrum and EPS use zpubs (BIP84 bc1... addresses), the descriptor wallet needs xpubs. Therefor the zpub in Electrum (Wallet -> Information) needs to be converted to a xpub using "xpub-converter" (which also gives the "fingerprint") and read into the full node wallet like this: 
+
+```
+bitcoin-cli importdescriptors '[{
+  "desc": "wpkh([<fingerprint>/84h/0h/0h]<xpub>/0/*)#pejpmwz4",
+  "timestamp": "now",
+  "range": [0,1000],
+  "watchonly": true,
+  "active": true
+}, {
+  "desc": "wpkh([<fingerprint>/84h/0h/0h]<xpub>/1/*)#sdhqxmjd",
+  "timestamp": "now",
+  "range": [0,1000],
+  "watchonly": true,
+  "active": true
+}]'
+```
+
+followed by a rescan. If you don't know the checksum (here "pejpmwz4" and "sdhqxmjd"), Bitcoin Core will tell you what the correct one is.
 
 THE REST OF THE TEXT IS FROM THE ORIGINAL CODE:
 
