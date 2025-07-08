@@ -29,7 +29,7 @@ bitcoin-cli importdescriptors '[{
 }]'
 ```
 
-followed by a rescan. If you don't know the checksum (here "pejpmwz4" and "sdhqxmjd"), Bitcoin Core will tell you what the correct one is.
+followed by a rescan. If you don't know the checksum (here "pejpmwz4" and "sdhqxmjd"), bitcoin-cli will tell you what the correct one is.
 
 THE REST OF THE TEXT IS FROM THE ORIGINAL CODE:
 
